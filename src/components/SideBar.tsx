@@ -4,11 +4,9 @@ import React from "react";
 // Components
 import { Button } from ".";
 
-interface GenreResponseProps {
-  id: number;
-  name: "action" | "comedy" | "documentary" | "drama" | "horror" | "family";
-  title: string;
-}
+// Types
+import { GenreResponseProps } from "../shared/types";
+
 interface ISideBarProps {
   genres: GenreResponseProps[];
   handleClickButton: (id: number) => void;

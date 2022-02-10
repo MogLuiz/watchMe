@@ -4,21 +4,15 @@ import React from "react";
 // Components
 import { MovieCard } from ".";
 
+// Types
+import { MovieProps } from "../shared/types";
+
 // Styles
 import "../styles/content.scss";
-interface IMovieProps {
-  imdbID: string;
-  Title: string;
-  Poster: string;
-  Ratings: Array<{
-    Source: string;
-    Value: string;
-  }>;
-  Runtime: string;
-}
+
 interface IContentProps {
   title: string;
-  movies: IMovieProps[];
+  movies: MovieProps[];
 }
 
 const Content: React.FC<IContentProps> = ({ title, movies }) => {
