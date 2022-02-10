@@ -1,5 +1,5 @@
 // Assets
-import { Icon } from "./Icon";
+import Icon from "./Icon";
 
 // Types
 import { ButtonHTMLAttributes } from "react";
@@ -13,7 +13,12 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   selected: boolean;
 }
 
-export function Button({ iconName, title, selected, ...rest }: ButtonProps) {
+const Button: React.FC<ButtonProps> = ({
+  iconName,
+  title,
+  selected,
+  ...rest
+}) => {
   // -------------------------------------------------
   // Render
   // -------------------------------------------------
@@ -27,4 +32,6 @@ export function Button({ iconName, title, selected, ...rest }: ButtonProps) {
       {title}
     </button>
   );
-}
+};
+
+export default Button;

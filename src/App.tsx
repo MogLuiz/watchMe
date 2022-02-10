@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 
 // Components
-import { Button } from "./components/Button";
-import { MovieCard } from "./components/MovieCard";
+import Button from "./components/Button";
+import MovieCard from "./components/MovieCard";
 // import { SideBar } from './components/SideBar';
 // import { Content } from './components/Content';
 
