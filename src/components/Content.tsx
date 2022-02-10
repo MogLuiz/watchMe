@@ -4,6 +4,8 @@ import React from "react";
 // Components
 import { MovieCard } from ".";
 
+// Styles
+import "../styles/content.scss";
 interface IMovieProps {
   imdbID: string;
   Title: string;
