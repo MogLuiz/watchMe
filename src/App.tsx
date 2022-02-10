@@ -15,7 +15,7 @@ import "./styles/global.scss";
 import "./styles/sidebar.scss";
 import "./styles/content.scss";
 
-export function App() {
+const App: React.FC = () => {
   // -------------------------------------------------
   // States
   // -------------------------------------------------
@@ -84,4 +84,6 @@ export function App() {
       </div>
     </div>
   );
-}
+};
+
+export default App;
