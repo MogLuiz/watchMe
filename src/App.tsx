@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 // Components
-import { Button, Content } from "./components";
+import { Button, Content, SideBar } from "./components";
 
 // Services
 import { api } from "./services/api";
@@ -62,21 +62,11 @@ const App: React.FC = () => {
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
       <nav className="sidebar">
-        <span>
-          Watch<p>Me</p>
-        </span>
-
-        <div className="buttons-container">
-          {genres.map((genre) => (
-            <Button
-              key={String(genre.id)}
-              title={genre.title}
-              iconName={genre.name}
-              onClick={() => handleClickButton(genre.id)}
-              selected={selectedGenreId === genre.id}
-            />
-          ))}
-        </div>
+        <SideBar
+          genres={genres}
+          handleClickButton={handleClickButton}
+          selectedGenreId={selectedGenreId}
+        />
       </nav>
 
       <div className="container">
